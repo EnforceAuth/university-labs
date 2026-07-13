@@ -1,0 +1,26 @@
+# Decision-log configuration for this lab.
+#
+# In production the PDP (OPA or Enterprise OPA) that this policy runs on emits a
+# decision log for every request. Masking is configured by pointing the
+# decision-log plugin at a mask rule. OPA evaluates that rule over every event
+# before shipping it and removes each JSON pointer the rule returns.
+#
+# --- Open-source OPA ---
+# `mask_decision` is the path to the mask rule. It defaults to /system/log/mask,
+# which is exactly the rule in mask.rego (package `system.log`, rule `mask`).
+# Setting it explicitly here shows the wiring.
+decision_logs:
+  console: true
+  mask_decision: /system/log/mask
+#
+# --- Enterprise OPA (eopa): decision_logs.mask ---
+# Enterprise OPA exposes the same masking through its `decision_logs.mask`
+# configuration, as a managed pipeline stage rather than only a Rego rule,
+# alongside related pipeline features such as delta bundles and datasources. The
+# exact schema is product-specific; confirm it against the eopa docs for your
+# version. For this lab we MODEL that config as a list of the same JSON pointer
+# the system.log.mask rule returns and the policy names in its obligation:
+#
+#   decision_logs:
+#     mask:
+#       - "/input/context/api_token"

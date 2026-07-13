@@ -1,0 +1,27 @@
+# Decision-log configuration for this lab.
+#
+# Masking is configured by pointing the decision-log plugin at a mask rule. OPA
+# evaluates that rule over every decision-log event before shipping it and
+# removes each JSON pointer the rule returns. This is the "close the loop" step:
+# the PDP evaluates the policy, then ships a masked decision log that Writ
+# collects and can replay.
+#
+# --- Open-source OPA ---
+# `mask_decision` is the path to the mask rule. It defaults to /system/log/mask,
+# which is exactly the rule in mask.rego (package `system.log`, rule `mask`).
+# Setting it explicitly here shows the wiring.
+decision_logs:
+  console: true
+  mask_decision: /system/log/mask
+#
+# --- Enterprise OPA (eopa): decision_logs.mask ---
+# Enterprise OPA exposes the same masking through its `decision_logs.mask`
+# configuration, as a managed pipeline stage rather than only a Rego rule. The
+# exact schema is product-specific; confirm it against the eopa docs for your
+# version. For this lab we MODEL that config as a list of the same JSON pointers
+# the system.log.mask rule returns:
+#
+#   decision_logs:
+#     mask:
+#       - "/input/subject/ssn"
+#       - "/input/resource/card_number"
