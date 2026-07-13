@@ -27,7 +27,7 @@ default allow := false
 # is currently denied and the three allow tests FAIL. That is expected.
 #
 # Add one `allow if { ... }` rule for each case (multiple rules with the same
-# Solutions are not published. Iterate until opa test is green.
+# name are a logical OR). Keep iterating until `opa test` is green.
 #
 # 1. Admins may delete any resource.
 #      input.action == "delete" and input.subject.role == "admin"

@@ -21,15 +21,9 @@ Hint: use the `in` operator to test membership in `permissions[<role>]`. An unkn
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/reference-hello-authorization -v
 ```
 
-The starter reports `FAIL: 3/6`. Implement the `TODO(learner)` rule until you reach `PASS: 6/6`.
-
-## Reference solution
-
-Solutions are not published. Iterate until opa test is green.
-
-```bash
-opa test courses/reference-hello-authorization-solution -v
-```
+The starter reports `FAIL: 3/6`. Implement the `TODO(learner)` rule until you reach `PASS: 6/6`. Keep iterating until `opa test` is green.

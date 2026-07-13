@@ -44,7 +44,7 @@ default allow := false
 #
 #   opa test courses/policy-lifecycle-build-promote-rollback -v
 #
-# Solutions are not published. Iterate until opa test is green.
+# Keep iterating until `opa test` is green.
 #
 # Until you implement these rules, the starter denies everything by default, so
 # the three allow tests in policy_test.rego fail. That RED state is the exercise.

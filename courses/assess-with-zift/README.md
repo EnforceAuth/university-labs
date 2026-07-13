@@ -35,9 +35,11 @@ the same name together, so a request is allowed if either path holds.
 
 ## Run
 
-Run from the repository root:
+From the cloned `university-labs` repo:
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/assess-with-zift -v
 ```
 
@@ -60,9 +62,6 @@ someone else's doc, an editor deleting, an owner deleting their own doc
 you widen the ownership path to cover `delete`, `test_owner_cannot_delete_own_doc`
 turns red and tells you.
 
-## Reference solution
-
-Solutions are not published. Iterate until opa test is green.
-work against it after you have tried the exercise. Certification is graded
-against a **hidden** test suite, not this one, so treat this lab and its
-solution as practice, not the answer key.
+Keep iterating until `opa test` is green. Certification is graded against a
+**hidden** test suite, not this one, so treat this lab as practice, not the
+answer key.

@@ -70,7 +70,7 @@ allow if reason == "privileged-tool-approved"
 #
 # `reason` is single-valued. The two branches are mutually exclusive by
 # resource.classification ("standard" vs "restricted"), so no complete-rule
-# Solutions are not published. Iterate until opa test is green.
+# conflict is possible. Keep iterating until `opa test` is green.
 # if you get stuck.
 
 # Fail-closed: no authorizing reason means deny. This default is what makes an

@@ -47,4 +47,4 @@ same_tenant if input.subject.tenant == input.resource.tenant
 # name are OR-ed together). Every rule must include `same_tenant` so tenant
 # isolation still holds. Use the `in` operator for the editor action set.
 # Run `opa test courses/migrating-to-enforceauth -v`
-# Solutions are not published. Iterate until opa test is green.
+# until `opa test` reports PASS: 8/8.

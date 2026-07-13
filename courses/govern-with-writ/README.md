@@ -35,18 +35,12 @@ The three allow tests assert the policy returns `allow` for a valid admin, edito
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/govern-with-writ -v
 ```
 
-Starter state: `FAIL: 3/6` (the three allow tests fail until you implement the rules). Target: `PASS: 6/6`.
-
-## Reference solution
-
-Solutions are not published. Iterate until opa test is green.
-
-```bash
-opa test courses/govern-with-writ-solution
-```
+Starter state: `FAIL: 3/6` (the three allow tests fail until you implement the rules). Target: `PASS: 6/6`. Keep iterating until `opa test` is green.
 
 ## How Writ would govern this file
 

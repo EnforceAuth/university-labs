@@ -46,7 +46,7 @@ default allow := false
 #   }
 #
 # When your rules are correct, `opa test` reports PASS: 8/8. Check your work
-# Solutions are not published. Iterate until opa test is green.
+# Keep iterating until `opa test` is green.
 
 # Isolation helpers (provided). Do not weaken these: they are the tenant, org,
 # system, and app boundaries the deny tests protect.

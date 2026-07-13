@@ -56,5 +56,4 @@ default allow := false
 #    The human-approver check is what closes off the Politeness Trap: an agent
 #    must never be able to approve its own sensitive action.
 #
-# Solutions are not published. Iterate until opa test is green.
-# first, then compare.
+# Keep iterating until `opa test` reports all tests passing.

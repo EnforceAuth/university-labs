@@ -8,7 +8,6 @@ This lab ships **RED**: `policy.rego` is a default-deny starter with the decisio
 
 - `policy.rego` — a default-deny starter. It denies everything until you add the allow rules.
 - `policy_test.rego` — the test suite (unchanged): three allow cases and three deny cases. Do not edit it.
-Solutions are not published. Iterate until opa test is green.
 
 ## Input shape
 
@@ -40,7 +39,9 @@ The suite in `policy_test.rego` asserts both directions:
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/foundations-authorization-gap -v
 ```
 
-Before you start you will see `PASS: 3/6` (the three deny tests already pass against default-deny). When your three rules are correct you will see `PASS: 6/6`. Solutions are not published. Iterate until opa test is green.
+Before you start you will see `PASS: 3/6` (the three deny tests already pass against default-deny). When your three rules are correct you will see `PASS: 6/6`. Keep iterating until `opa test` is green.

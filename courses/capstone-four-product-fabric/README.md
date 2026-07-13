@@ -84,20 +84,14 @@ classification checks.
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/capstone-four-product-fabric -v
 ```
 
 Starter state: `FAIL: 3/11` (the three allow tests fail until you implement the
-rules; the deny and mask tests already pass). Target: `PASS: 11/11`.
-
-## Reference solution
-
-Solutions are not published. Iterate until opa test is green.
-Try the exercise first, then compare. Verify it independently with:
-
-```bash
-opa test courses/capstone-four-product-fabric-solution
-```
+rules; the deny and mask tests already pass). Target: `PASS: 11/11`. Keep
+iterating until `opa test` is green.
 
 ## How the four products assemble around this file
 

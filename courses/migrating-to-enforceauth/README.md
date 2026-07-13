@@ -37,6 +37,8 @@ This lab ships **RED**. `policy.rego` is a starter: tenant isolation (`same_tena
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/migrating-to-enforceauth -v
 ```
 
@@ -56,4 +58,4 @@ Re-run the suite until you reach `PASS: 8/8`. What each test checks:
 - The four allow tests assert the source system's allowed decisions are preserved (admin delete, editor write, member reads public, owner deletes own).
 - The four deny tests are the regression guards: cross-tenant admin is denied, editor cannot delete, member cannot read `confidential`, and a non-owner cannot delete. If your rules widen access too far, one of these flips to allow and fails.
 
-Solutions are not published. Iterate until opa test is green.
+When the suite is green, you are done — keep iterating until `opa test` reports all tests passing.

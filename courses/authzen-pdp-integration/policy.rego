@@ -31,8 +31,8 @@ package university.authzen.evaluation
 #   - Anyone may read a resource classified "public".
 # Everything else must fall through to the default deny.
 #
-# Solutions are not published. Iterate until opa test is green.
-# compare. See README.md and lesson 02 for the full exercise and rules.
+# Keep iterating until `opa test` reports all tests passing.
+# See README.md and lesson 02 for the full exercise and rules.
 
 default decision := false
 

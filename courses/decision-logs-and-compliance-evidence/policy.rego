@@ -52,8 +52,7 @@ allow if reason == "break-glass"
 #
 # `reason` is single-valued, so guard the break-glass body with the negated
 # membership check above; otherwise the two rules can both fire on one input
-# and OPA reports a complete-rule conflict. The reference solution is in
-# Solutions are not published. Iterate until opa test is green.
+# and OPA reports a complete-rule conflict. Keep iterating until `opa test` is green.
 
 default reason := "deny-no-authorization"
 

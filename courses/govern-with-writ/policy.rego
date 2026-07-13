@@ -44,4 +44,4 @@ default allow := false
 #     input.action in {"read", "write"}.
 #
 # Run `opa test courses/govern-with-writ -v`
-# Solutions are not published. Iterate until opa test is green.
+# until `opa test` reports PASS: 6/6.

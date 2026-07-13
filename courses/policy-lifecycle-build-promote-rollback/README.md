@@ -2,7 +2,7 @@
 
 A runnable OPA lab for the "Policy Lifecycle: Build, Promote & Roll Back" course. Real `opa`, no invented tooling.
 
-`policy.rego` ships as a **starter**: it declares `default allow := false` and a `TODO(learner)` block. Your job is to implement the authorization rules until the test suite passes. Solutions are not published. Iterate until opa test is green.
+`policy.rego` ships as a **starter**: it declares `default allow := false` and a `TODO(learner)` block. Your job is to implement the authorization rules until the test suite passes.
 
 ## Files
 
@@ -41,10 +41,12 @@ Open `policy.rego` and replace the `TODO(learner)` block with incremental `allow
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/policy-lifecycle-build-promote-rollback -v
 ```
 
-Run it from the repository root. The starter reports `FAIL: 3/7` (the three allow cases). When your implementation is complete you should see `PASS: 7/7`. Solutions are not published. Iterate until opa test is green.
+Run it from the cloned `university-labs` repo. The starter reports `FAIL: 3/7` (the three allow cases). When your implementation is complete you should see `PASS: 7/7`. Keep iterating until `opa test` is green.
 
 ## Build the deployable artifact
 
@@ -56,7 +58,7 @@ opa build -b courses/policy-lifecycle-build-promote-rollback \
 opa inspect bundle.tar.gz
 ```
 
-Run it from the repository root. The starter compiles, so the build succeeds before you finish the exercise; `opa test`, not `opa build`, is what decides whether the artifact may promote. `bundle.tar.gz` is the artifact Writ signs and `deploy-action` ships (lesson 2).
+Run it from the cloned `university-labs` repo. The starter compiles, so the build succeeds before you finish the exercise; `opa test`, not `opa build`, is what decides whether the artifact may promote. `bundle.tar.gz` is the artifact Writ signs and `deploy-action` ships (lesson 2).
 
 ## Why this policy is the lab
 

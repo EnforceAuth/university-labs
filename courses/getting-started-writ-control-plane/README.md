@@ -2,13 +2,12 @@
 
 A runnable OPA lab for the "Getting Started with the EnforceAuth Control Plane" course. Real `opa`, no invented tooling.
 
-`policy.rego` ships as a **starter**: the default-deny and the isolation helpers are written for you, but the four allow rules are a `TODO(learner)` stub. The suite starts **red** (four allow tests fail). Your job is to author the rules until it is green. Solutions are not published. Iterate until opa test is green.
+`policy.rego` ships as a **starter**: the default-deny and the isolation helpers are written for you, but the four allow rules are a `TODO(learner)` stub. The suite starts **red** (four allow tests fail). Your job is to author the rules until it is green.
 
 ## Files
 
 - `policy.rego` — the starter you complete. Default-deny plus the tenant, org, system, and app isolation helpers are provided; the allow rules are a TODO stub.
 - `policy_test.rego` — the graded test suite: four allow cases and four deny cases (one hierarchy level each). Do not edit it.
-Solutions are not published. Iterate until opa test is green.
 
 ## Input shape
 
@@ -50,10 +49,12 @@ The isolation helpers are already written. Do not weaken them: `same_tenant` req
 
 ## Run
 
-From the repository root:
+From the cloned `university-labs` repo:
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/getting-started-writ-control-plane -v
 ```
 
-Before you start, this reports `FAIL: 4/8` (the four allow tests). When your rules are correct it reports `PASS: 8/8`. Solutions are not published. Iterate until opa test is green.
+Before you start, this reports `FAIL: 4/8` (the four allow tests). When your rules are correct it reports `PASS: 8/8`. Keep iterating until `opa test` is green.

@@ -27,4 +27,4 @@ permissions := {
 #
 # Until you implement this rule, `allow` is false for every request
 # (default-deny), so the three allow-case tests FAIL. Making them pass is the
-# Solutions are not published. Iterate until opa test is green.
+# Keep iterating until `opa test` is green.

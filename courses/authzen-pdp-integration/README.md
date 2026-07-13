@@ -2,13 +2,12 @@
 
 A runnable OPA lab for the "AuthZEN & PDP Integration" course. Real `opa`, no invented tooling.
 
-This is a fill-in-the-blank lab. `policy.rego` ships as a default-deny **starter** with the decision logic left as a `TODO(learner)`. Your job is to implement it until the test suite passes. Solutions are not published. Iterate until opa test is green.
+This is a fill-in-the-blank lab. `policy.rego` ships as a default-deny **starter** with the decision logic left as a `TODO(learner)`. Your job is to implement it until the test suite passes.
 
 ## Files
 
 - `policy.rego` — the **starter**. It answers an OpenID AuthZEN 1.0 evaluation, but only with `default decision := false`; the allow rules are a `TODO` you complete. The request body is `input`; the boolean result is `decision`.
 - `policy_test.rego` — the graded test suite: four allow cases and five deny cases. Do not edit it; make it pass.
-Solutions are not published. Iterate until opa test is green.
 
 ## AuthZEN request shape
 
@@ -47,17 +46,15 @@ The AuthZEN response is `{"decision": true}`. In the lab that boolean is the `de
 
 ## Run
 
-From the repository root:
+From the cloned `university-labs` repo:
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/authzen-pdp-integration -v
 ```
 
-On the untouched starter you get `PASS: 5/9` (the five deny cases pass; the four allow cases fail). Implement the `TODO(learner)` in `policy.rego` until you reach `PASS: 9/9`. To check your work against the reference:
-
-```bash
-opa test courses/authzen-pdp-integration-solution -v
-```
+On the untouched starter you get `PASS: 5/9` (the five deny cases pass; the four allow cases fail). Implement the `TODO(learner)` in `policy.rego` until you reach `PASS: 9/9`. Keep iterating until `opa test` is green.
 
 Expected: `PASS: 9/9`.
 
@@ -97,7 +94,7 @@ contract.
 
 ## Exercise
 
-**Primary task.** Implement the `decision` in `policy.rego` so the four allow tests pass while the five deny tests stay passing. The idiomatic shape is several small `allow if { ... }` rules OR-ed together, with `decision if allow`, one rule per bullet in the Rules section above (admin, owner, editor-in-department, public-read). Gate the `owner` rule to `can_read`/`can_edit`/`can_delete` so the owner is not silently granted every action. Solutions are not published. Iterate until opa test is green.
+**Primary task.** Implement the `decision` in `policy.rego` so the four allow tests pass while the five deny tests stay passing. The idiomatic shape is several small `allow if { ... }` rules OR-ed together, with `decision if allow`, one rule per bullet in the Rules section above (admin, owner, editor-in-department, public-read). Gate the `owner` rule to `can_read`/`can_edit`/`can_delete` so the owner is not silently granted every action. Run `opa test courses/authzen-pdp-integration -v` until you see `PASS: 9/9`.
 
 **Stretch goals** (optional, once the suite is green):
 

@@ -15,7 +15,6 @@ Open `policy.rego` and find the `# TODO(learner)` block. As shipped, `reason` on
 
 `reason` is single-valued, but the two branches are mutually exclusive by `resource.classification` (`"standard"` vs `"restricted"`), so no complete-rule conflict is possible. The `allow` lines, the `default reason`, the redaction obligation, and the `decision` object are already wired for you.
 
-Solutions are not published. Iterate until opa test is green.
 
 ## Files
 
@@ -83,13 +82,15 @@ decision_logs:
 
 ## Run
 
-Run from the repo root:
+From the cloned `university-labs` repo:
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/reference-architectures -v
 ```
 
-The starter reports `FAIL: 2/11`. Solutions are not published. Iterate until opa test is green.
+The starter reports `FAIL: 2/11`. When your two `reason` rules are correct it reports `PASS: 11/11`.
 
 ## Going further
 

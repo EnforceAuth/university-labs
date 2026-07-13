@@ -50,11 +50,11 @@ The deny tests are the point: each one names a way a bad action could slip throu
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/defend-with-verdict -v
 ```
 
 The starter fails 3 of 7 (the allow cases). When your implementation is correct you will see `PASS: 7/7`.
 
-## Reference solution
-
-Solutions are not published. Iterate until opa test is green.
+Implement the starter until `opa test` is green. This lab is practice for the machine-graded certification, which runs your policy against a hidden test suite you do not see.

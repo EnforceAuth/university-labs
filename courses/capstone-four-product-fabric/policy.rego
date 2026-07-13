@@ -86,7 +86,7 @@ role_permissions := {
 #   - Use the `in` operator for the action and classification checks.
 #
 # Run `opa test courses/capstone-four-product-fabric -v`
-# Solutions are not published. Iterate until opa test is green.
+# until `opa test` reports PASS: 11/11.
 
 # The structured decision the PDP emits and the decision log records. This is
 # the object Writ collects and can replay; mask.rego strips the sensitive

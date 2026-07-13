@@ -18,7 +18,6 @@ Write each as its own `allow if { ... }` block; the two rules OR together. A mut
 - `policy.rego` — starter policy with a default deny and the two allow rules left as a TODO for you to implement.
 - `policy_test.rego` — the graded test suite: three allow cases and five deny cases. Do not edit it.
 
-Solutions are not published. Iterate until opa test is green.
 
 ## Input shape
 
@@ -54,10 +53,12 @@ Each field is federated from a system of record. These five sources are the exam
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/evaluate-with-herald -v
 ```
 
-Run it from the repo root (the path is repo-root-relative). On the starter you will see `FAIL: 3/8` (the three allow tests). When you finish the TODO the target is `PASS: 8/8`.
+On the starter you will see `FAIL: 3/8` (the three allow tests). When you finish the TODO the target is `PASS: 8/8`.
 
 ## Once you are green
 

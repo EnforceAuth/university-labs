@@ -45,8 +45,7 @@ authorized_group if {
 # TODO(learner): implement the two allow rules that model the Herald decision.
 # Right now nothing sets `allow` to true, so every request falls through to the
 # default deny and the three allow tests in policy_test.rego FAIL. Your job is to
-# author the allow paths until `opa test` is green. The reference solution lives
-# Solutions are not published. Iterate until opa test is green.
+# author the allow paths until `opa test` is green.
 #
 # Rule 1 (non-restricted read): allow when ALL of these hold
 #   - input.action is in read_actions           (read-only scope)

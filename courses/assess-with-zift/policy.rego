@@ -12,8 +12,7 @@ package university.zift.authz
 # This starter ships the default-deny base and the extracted role table. The
 # two `allow` decision rules have been removed and left as a TODO for you to
 # implement. Run `opa test` against this directory to see which tests fail,
-# implement the rules, and get back to green. The reference solution lives in
-# Solutions are not published. Iterate until opa test is green.
+# implement the rules, and get back to green.
 #
 # This is standard OPA/Rego. Writ (EnforceAuth's control plane) governs and
 # deploys policies like this from Git; it is not a PDP on the request path.
@@ -45,4 +44,4 @@ role_permissions := {
 #      document does not let you delete it.
 #
 # Until you add these rules, `allow` is always false: every allow test fails
-# Solutions are not published. Iterate until opa test is green.
+# while the deny tests pass. Keep iterating until `opa test` is green.

@@ -10,7 +10,7 @@ package university.opa_eopa.fundamentals
 #
 # STARTER: the scaffolding (data, helpers, method sets) is provided. The two
 # decision rules are stubbed out with a TODO. Implement them until
-# Solutions are not published. Iterate until opa test is green.
+# Keep iterating until `opa test` is green.
 
 default allow := false
 

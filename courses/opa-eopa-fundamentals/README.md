@@ -2,7 +2,7 @@
 
 A runnable OPA lab for the Associate course. Standard `opa`, no invented tooling. It also runs unchanged on Enterprise OPA (`eopa`), which is drop-in compatible.
 
-`policy.rego` ships as a **starter**: the scaffolding is written for you and the two decision rules are stubbed with a `# TODO(learner)` block. Your job is to implement them so the test suite passes. Solutions are not published. Iterate until opa test is green.
+`policy.rego` ships as a **starter**: the scaffolding is written for you and the two decision rules are stubbed with a `# TODO(learner)` block. Your job is to implement them so the test suite passes.
 
 ## Files
 
@@ -26,9 +26,11 @@ An account that is not a key in `account_tiers` makes `subject_tier` undefined, 
 ## Run
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/opa-eopa-fundamentals -v
 ```
 
-Run from the repository root, or `cd` into this `lab/` directory and run `opa test . -v`.
+From the cloned `university-labs` repo run the suite above, or `cd` into `courses/<course-id>/` and run `opa test . -v`.
 
-The starter is **red** on purpose: it reports `PASS: 3/6` because the three allow tests fail while `allow` is still the default `false`. Solutions are not published. Iterate until opa test is green.
+The starter is **red** on purpose: it reports `PASS: 3/6` because the three allow tests fail while `allow` is still the default `false`. Implement the two rules until you reach `PASS: 6/6`. Keep iterating until `opa test` is green.

@@ -13,7 +13,6 @@ Open `policy.rego` and find the `# TODO(learner)` block. As shipped, `reason` on
 
 `reason` is single-valued. Guard the break-glass body with the negated membership check so the two rules cannot both fire on one input; otherwise OPA reports a complete-rule conflict. The `allow` lines and the `default reason` are already wired for you.
 
-Solutions are not published. Iterate until opa test is green.
 
 ## Files
 
@@ -71,13 +70,15 @@ decision_logs:
 
 ## Run
 
-Run from the repo root:
+From the cloned `university-labs` repo:
 
 ```bash
+git clone https://github.com/EnforceAuth/university-labs.git
+cd university-labs
 opa test courses/decision-logs-and-compliance-evidence -v
 ```
 
-The starter reports `FAIL: 2/9`. Solutions are not published. Iterate until opa test is green.
+The starter reports `FAIL: 2/9`. When your two `reason` rules are correct it reports `PASS: 9/9`.
 
 ## Going further
 
