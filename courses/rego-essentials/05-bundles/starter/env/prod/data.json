@@ -1,0 +1,1 @@
+{"config":{"env":"prod","allowed_roles":{"read":["viewer"],"deploy":["sre"]}}}

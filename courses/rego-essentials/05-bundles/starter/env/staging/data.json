@@ -1,0 +1,1 @@
+{"config":{"env":"staging","allowed_roles":{"read":["viewer"],"deploy":["sre"]}}}
